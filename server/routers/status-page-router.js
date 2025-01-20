@@ -40,7 +40,7 @@ router.get("/status-page", cache("5 minutes"), async (request, response) => {
 });
 
 router.get(
-    "/api/status-page/all",
+    "/api/status-pages",
     cache("5 minutes"),
     async (request, response) => {
         allowDevAllOrigin(response);
