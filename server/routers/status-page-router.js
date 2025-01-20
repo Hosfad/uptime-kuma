@@ -47,10 +47,11 @@ router.get(
         let statusPages = await R.findAll("status_page");
         let statusPageData = [];
 
-        for (let statusPage of statusPages) {
-            let statusPage = await StatusPage.getStatusPageData(statusPage);
-            statusPageData.push(statusPage);
+        for (let page of statusPages) {
+            let pageData = await StatusPage.getStatusPageData(page);
+            statusPageData.push(pageData);
         }
+        console.log(statusPageData);
 
         response.json(statusPageData);
     }
